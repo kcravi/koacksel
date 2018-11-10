@@ -1,0 +1,247 @@
+// @import "*";
+@import "foundation_and_overrides";
+
+body {
+  background-color: #f2e3da;
+}
+
+// LOGIN
+
+.login-wrapper {
+  margin-top: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: #f2e3da;
+  font-style: oblique;
+}
+
+.callout.custom {
+  background-color: #ded3d4;
+}
+
+
+// NAVBAR ----------------------------------
+
+.title-bar.custom {
+  background-color: #770a16;
+}
+
+.title-bar.custom:hover,
+.title-bar.custom:focus {
+background-color: darken($titlebar-color, 95%);
+}
+
+.drilldown a {
+    background: #ff3642 none repeat scroll 0 0;
+    padding: 0.7rem 1rem;
+}
+
+#drilldown-wrapper {
+  background: #ff3642;
+  padding: 0.3rem;
+}
+
+.edit, .logout, .drilldown a {
+  &:hover {
+   background-color: #fdb4b9;
+ }
+}
+
+.top-bar {
+  background-color: #ff3642;
+  padding: 0;
+}
+
+.top-bar-left .menu  {
+  background-color: #ff3642;
+  padding: 0;
+}
+
+.top-bar-right .menu  {
+  background-color: #ff3642;
+}
+
+.top-bar-right {
+  margin-top: 0;
+}
+
+.fa-2x {
+  color: #f2e3da;
+}
+
+.name a {
+  color: #f2e3da;
+}
+
+.title-name a {
+  color: #f2e3da;
+  padding: 0;
+}
+
+// INDEXCONTAINER ---------------------------
+
+.user-wrapper {
+  margin-top: 1.1rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+}
+
+.user-list {
+  cursor: pointer;
+}
+
+.users, .chat {
+  color: #1779BA;
+  &:hover {
+    background-color: #f2e3da;
+    display: block;
+ }
+}
+
+.delete-icon {
+  float: right;
+  color: red;
+}
+
+.panel {
+  margin: 0;
+  background-color: #ded3d4;
+  padding: 0.5rem;
+}
+
+.wrapper {
+  margin: 0 20px 0 20px;
+}
+
+.private-chat-title {
+  margin-bottom: 0rem;
+}
+.general-chat-title {
+  margin-bottom: 0rem;
+}
+
+.plusButton {
+  color: green;
+}
+.general-chat {
+  margin-top: 0.1rem;
+  height: 15rem;
+  padding: 0.8rem;
+}
+
+.private-chat {
+  height: 10rem;
+  padding: 0.8rem;
+}
+
+
+// SHOWCONTAINER ---------------------------------
+
+
+.chat-show-title{
+  margin-top: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.chat-show {
+  height: 20rem;
+}
+#text {
+  color: red;
+}
+
+#chatWindow {
+  background-color: #ded3d4;
+  overflow: scroll;
+}
+
+.user {
+  color: #770a16;
+}
+
+.msg-date {
+  font-size: 0.9em;
+  color: #9c7c7e;
+  padding: 0.5em;
+}
+
+.msg-border-left {
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  position: relative;
+	background: #9c7c7e;
+  overflow-y: scroll;
+  max-width: 50%;
+  overflow-x: hidden;
+}
+
+.msg-border-right {
+  border-radius: 0.6rem;
+  // border: 1px solid grey;
+  padding: 0.5rem;
+  position: relative;
+	background: #bda8a9;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 50%;
+}
+
+.msg-border-left:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 13px solid transparent;
+	border-right-color: #9c7c7e;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -6.5px;
+	margin-left: -13px;
+}
+.msg-border-right:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 13px solid transparent;
+	border-left-color: #bda8a9;
+	border-right: 0;
+	border-bottom: 1px;
+	margin-top: -6.5px;
+	margin-right: -13px;
+}
+
+.right {
+  float: right;
+}
+
+// BUTTONS
+
+.button {
+  background-color: #ff3642;
+}
+
+// ALERT FLASH-MSG
+
+.flash-alert {
+  max-width: 65%;
+  margin: 0.5rem auto 0 auto;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  border: 1px black solid;
+}
+
+.callout.alert {
+  background-color: #ff3642;
+}
+.callout.success {
+  background-color: #43AC6A;
+}
+
+.cross-button {
+  margin-left: 1rem;
+  font-size: x-large;
+}

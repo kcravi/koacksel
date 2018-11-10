@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag "application" %>
+    <link rel="slylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <% if current_user && url_for != edit_user_registration_path && url_for != user_registration_path %>
+      <div class="title-bar custom" data-responsive-toggle="main-nav" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle="main-nav"></button>
+        <div class="title-bar-title">Menu</div>
+      </div>
+    <% end %>
+
+    <div class="top-bar" id="main-nav" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;" >
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text title-name">
+            <a href="/"><i class="fa fa-comment fa-2x">&nbsp;</i>Koacksel</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="top-bar-right">
+        <% if current_user %>
+          <ul class="dropdown vertical medium-horizontal menu" data-responsive-menu="drilldown medium-dropdown" data-auto-height="true" data-animate-height="true">
+            <li class="menu-text name"> <a href="#"> <%= current_user.username %> <i class="fa fa-user fa-lg"></i> </a>
+              <ul class="menu menu-text name" id="drilldown-wrapper">
+                <li class="edit"><%= link_to 'Edit', edit_user_registration_path, class: "nav-link" %></li>
+                <li class="logout"><%= link_to "Sign Out", destroy_user_session_path, class: "nav-link" %></li>
+              </ul>
+            </li>
+           </ul>
+        <% else %>
+        <ul class="menu menu-text name">
+          <li><%= link_to "Sign In", new_user_session_path, class: "nav-link" %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %></li>
+        </ul>
+        <% end %>
+      </div>
+    </div>
+
+    <div>
+      <% flash.each do |name, msg| %>
+        <div data-closable class="alert-box callout text-center flash-alert <%= name == 'notice' ? 'success' : 'alert' %>">
+          <em><%= msg %></em>
+          <button class="close" type="button" data-close>
+            <span aria-hidden="true" class="cross-button">&CircleTimes;</span>
+          </button>
+        </div>
+      <% end %>
+    </div>
+
+    <%= yield %>
+
+  </body>
+</html>
