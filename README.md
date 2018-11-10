@@ -1,4 +1,4 @@
-![Build Status](https://codeship.com/projects/262f1f50-c76e-0136-99fa-02b711961e9b/status?branch=master)
+![Build Status](https://codeship.com/projects/f581e730-c770-0136-8cd5-6ac2adf14013/status?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/kcravi/koacksel/badge.svg?branch=master)](https://coveralls.io/github/kcravi/koacksel?branch=master)
 
 # Koacksel
