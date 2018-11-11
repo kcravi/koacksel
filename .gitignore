@@ -22,5 +22,4 @@ conig/# See https://help.github.com/articles/ignoring-files for more about ignor
 /react/coverage
 extra.md
 /coverage
-config/secrets.yml
 .env
