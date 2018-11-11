@@ -11,9 +11,9 @@ Devise.setup do |config|
     config.secret_key = ENV["SECRET_KEY_BASE"]
   elsif Rails.env.development?
     config.secret_key = ENV["SECRET_KEY_DEV"]
-  else
+  elsif Rails.env.test?
     config.secret_key = ENV["SECRET_KEY_TEST"]
-  end 
+  end
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
