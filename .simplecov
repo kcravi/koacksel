@@ -5,7 +5,6 @@ require 'simplecov'
  SimpleCov.start do
    add_filter 'app/jobs/application_job.rb'
    add_filter 'app/mailers/application_mailer.rb'
-   add_filter 'config/initializers/wrap_parameters.rb'
    add_filter 'app/controllers/users/sessions_controller.rb'
    add_filter 'app/controllers/users/registrations_controller.rb'
    add_filter 'app/controllers/users/omniauth_callbacks_controller.rb'
