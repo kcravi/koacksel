@@ -20,7 +20,3 @@ And then, in a separate terminal tab:
 $ npm install
 $ npm start
 ```
-
-References:
-This chat app is inspired by my mentor Nick Alberts work on ActionCable for chat purpose. So the title name of the app was not altered either.
-https://github.com/nwalberts/koacksel
