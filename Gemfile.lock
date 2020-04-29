@@ -195,8 +195,8 @@ GEM
     pry-rails (0.3.6)
       pry (>= 0.10.4)
     public_suffix (3.0.3)
-    puma (3.12.0)
-    puma (3.12.0-java)
+    puma (3.12.4)
+    puma (3.12.4-java)
     rack (2.0.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -376,7 +376,7 @@ DEPENDENCIES
   pg (~> 0.15)
   pg_search
   pry-rails
-  puma (~> 3.7)
+  puma (~> 3.12)
   rails (= 5.1.2)
   rails_12factor
   redis (~> 3.0)
