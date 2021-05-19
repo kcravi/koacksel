@@ -13,7 +13,7 @@ gem 'jquery-rails'
 gem 'listen'
 gem 'haml-rails'
 gem 'devise'
-gem "puma", "~> 3.7"
+gem "puma", "~> 4.3"
 gem "coffee-rails", "~> 4.2"
 gem "jbuilder", "~> 2.5"
 gem "redis", "~> 3.0"
